@@ -1,7 +1,6 @@
 import s from './style.module.css';
 
-const Layout = ({ id, title, descr, urlBg, colorBg }) => {  //id title descr urlBg colorBg
-    // console.log(id, title, desc, urlBg, colorBg);
+const Layout = ({ id, title, urlBg, colorBg, children }) => {  //id title descr urlBg colorBg
 
     const bg = {};
     if (urlBg) {
@@ -21,7 +20,7 @@ const Layout = ({ id, title, descr, urlBg, colorBg }) => {  //id title descr url
                         <span className={s.separator}></span>
                     </div>
                     <div className={s.desc + ' ' + s.full}>
-                        <p>{descr}</p>
+                        {children}
                     </div>
                 </article>
             </div >
